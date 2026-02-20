@@ -22,7 +22,11 @@ class AudioRecorderService {
 
         // Start recording to file
         await _audioRecorder.start(
-          const RecordConfig(encoder: AudioEncoder.wav),
+          const RecordConfig(
+            encoder: AudioEncoder.wav,
+            sampleRate: 16000,
+            numChannels: 1, // Force Mono
+          ),
           path: audioPath,
         );
         _isRecording = true;

@@ -16,7 +16,6 @@ class GoogleSttService {
       final Map<String, dynamic> requestBody = {
         "config": {
           "encoding": "LINEAR16",
-          "sampleRateHertz": 16000,
           "languageCode": "ar-SA",
           "enableAutomaticPunctuation": false,
           "model": "command_and_search",

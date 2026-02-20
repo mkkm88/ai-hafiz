@@ -21,9 +21,8 @@ class RecitationBloc extends Bloc<RecitationEvent, RecitationState> {
   Timer? _silenceTimer;
 
   // Settings for silence detection
-  static const double _silenceThreshold = -30.0; // dB
-  static const int _silenceDurationMs =
-      1500; // 1.5 seconds silence triggers processing
+  static const double _silenceThreshold = -50.0; // dB (More sensitive)
+  static const int _silenceDurationMs = 3000; // 3 seconds wait
 
   RecitationBloc({required QuranRepository quranRepository, required this.mode})
     : _quranRepository = quranRepository,

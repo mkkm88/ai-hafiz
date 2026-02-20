@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'core/theme/app_theme.dart';
 import 'features/quran_data/repository/quran_repository.dart';
+import 'features/home/screens/home_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +19,7 @@ class AiHafizApp extends StatelessWidget {
       child: MaterialApp(
         title: 'AI Hafiz',
         theme: AppTheme.darkTheme,
-        home: const Scaffold(body: Center(child: CircularProgressIndicator())),
+        home: const HomeScreen(),
         debugShowCheckedModeBanner: false,
       ),
     );
